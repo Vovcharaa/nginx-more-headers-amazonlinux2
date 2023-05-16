@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  amazonlinux:
+    build:
+      context: .
+      args:
+        - NGINX_VERSION=1.22.1
+        - HEADERS_MORE_NGINX_VERSION=0.34
+    platform: linux/amd64
+    volumes:
+      - ./:/out
